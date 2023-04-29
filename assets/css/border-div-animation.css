@@ -1,0 +1,97 @@
+.geeks { 
+    position: absolute; 
+    text-align: center;
+    border-radius: 10px;
+} 
+
+.featured-card { 
+    position: relative; 
+} 
+
+.geeks::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    width: 0; 
+    height: 0; 
+    background: transparent; 
+    border: 2px solid transparent; 
+} 
+
+.geeks:hover::before { 
+    animation: animate 1s linear forwards; 
+} 
+
+@keyframes animate { 
+    0% { 
+        width: 0; 
+        height: 0; 
+        border-top-color: #FF7614; 
+        border-right-color: transparent; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+
+    50% { 
+        width: 100%; 
+        height: 0; 
+        border-top-color: #FF7614; 
+        border-right-color: #FF7614; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+
+    100% { 
+        width: 100%; 
+        height: 100%; 
+        border-top-color: #FF7614; 
+        border-right-color: #FF7614; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+} 
+
+.geeks::after { 
+    content: ""; 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    width: 0; 
+    height: 0; 
+    background: transparent; 
+    border: 2px solid transparent; 
+} 
+
+.geeks:hover::after { 
+    animation: animates 1s linear forwards; 
+} 
+
+@keyframes animates { 
+    0% { 
+        width: 0; 
+        height: 0; 
+        border-top-color: transparent; 
+        border-right-color: transparent; 
+        border-bottom-color: transparent; 
+        border-left-color: #FF7614; 
+    } 
+
+    50% { 
+        width: 0; 
+        height: 100%; 
+        border-top-color: transparent; 
+        border-right-color: transparent; 
+        border-bottom-color:#FF7614; 
+        border-left-color: #FF7614; 
+    } 
+
+    100% { 
+        width: 100%; 
+        height: 100%; 
+        border-top-color: transparent; 
+        border-right-color: transparent; 
+        border-bottom-color:#FF7614; 
+        border-left-color: #FF7614; 
+    } 
+} 
